@@ -1,0 +1,10 @@
+name: date-calculator-ai-mcp
+description: "MEOK AI Labs — Date Calculator tools for AI agents and LLMs"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/date-calculator-ai-mcp
+license: MIT
+categories: [Utilities, Date/Time]
+tags: [date-calculation, datetime, timezone, date-math, calendar-utils]
+runtime: python
+entrypoint: server.py
