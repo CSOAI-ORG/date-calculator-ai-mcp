@@ -1,4 +1,9 @@
 """Date Calculator AI MCP Server — Date math tools."""
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import time
 from datetime import datetime, timedelta
 from typing import Any
@@ -20,8 +25,12 @@ def _rate_check(tool: str) -> bool:
 WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 @mcp.tool()
-def days_between(date1: str, date2: str) -> dict[str, Any]:
+def days_between(date1: str, date2: str, api_key: str = "") -> dict[str, Any]:
     """Calculate days between two dates (YYYY-MM-DD). Also returns weeks, months estimate, and business days."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("days_between"):
         return {"error": "Rate limit exceeded (50/day)"}
     try:
@@ -48,8 +57,12 @@ def days_between(date1: str, date2: str) -> dict[str, Any]:
     }
 
 @mcp.tool()
-def add_business_days(start_date: str, business_days: int, holidays: str = "") -> dict[str, Any]:
+def add_business_days(start_date: str, business_days: int, holidays: str = "", api_key: str = "") -> dict[str, Any]:
     """Add business days to a date, optionally excluding holidays (comma-separated YYYY-MM-DD)."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("add_business_days"):
         return {"error": "Rate limit exceeded (50/day)"}
     try:
@@ -85,8 +98,12 @@ def add_business_days(start_date: str, business_days: int, holidays: str = "") -
     }
 
 @mcp.tool()
-def next_weekday(start_date: str, target_day: str, occurrence: int = 1) -> dict[str, Any]:
+def next_weekday(start_date: str, target_day: str, occurrence: int = 1, api_key: str = "") -> dict[str, Any]:
     """Find the next occurrence of a weekday. target_day: Monday-Sunday. occurrence: nth occurrence (1-52)."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("next_weekday"):
         return {"error": "Rate limit exceeded (50/day)"}
     try:
@@ -112,8 +129,12 @@ def next_weekday(start_date: str, target_day: str, occurrence: int = 1) -> dict[
     }
 
 @mcp.tool()
-def format_date(date_string: str, input_format: str = "%Y-%m-%d", output_format: str = "%B %d, %Y") -> dict[str, Any]:
+def format_date(date_string: str, input_format: str = "%Y-%m-%d", output_format: str = "%B %d, %Y", api_key: str = "") -> dict[str, Any]:
     """Parse and reformat dates. Common formats: %Y-%m-%d, %d/%m/%Y, %m/%d/%Y, %B %d %Y, %A %B %d %Y, %Y%m%d, ISO8601."""
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _rate_check("format_date"):
         return {"error": "Rate limit exceeded (50/day)"}
     try:

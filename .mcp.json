@@ -1,23 +1,91 @@
 {
   "name": "date-calculator-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Date Calculator tools for AI agents and LLMs",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/date-calculator-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "MCP server for date math tools.",
+  "version": "1.0.0",
   "tools": [
-    "days_between",
-    "add_business_days",
-    "next_weekday",
-    "format_date"
-  ],
-  "categories": [
-    "Utilities",
-    "Date/Time"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "days_between",
+      "description": "Calculate days between two dates (YYYY-MM-DD). Also returns weeks, months estimate, and business days.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date1": {
+            "type": "string"
+          },
+          "date2": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "date1",
+          "date2"
+        ]
+      }
+    },
+    {
+      "name": "add_business_days",
+      "description": "Add business days to a date, optionally excluding holidays (comma-separated YYYY-MM-DD).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_date": {
+            "type": "string"
+          },
+          "business_days": {
+            "type": "integer"
+          },
+          "holidays": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "start_date",
+          "business_days"
+        ]
+      }
+    },
+    {
+      "name": "next_weekday",
+      "description": "Find the next occurrence of a weekday. target_day: Monday-Sunday. occurrence: nth occurrence (1-52).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "start_date": {
+            "type": "string"
+          },
+          "target_day": {
+            "type": "string"
+          },
+          "occurrence": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "start_date",
+          "target_day"
+        ]
+      }
+    },
+    {
+      "name": "format_date",
+      "description": "Parse and reformat dates. Common formats: %Y-%m-%d, %d/%m/%Y, %m/%d/%Y, %B %d %Y, %A %B %d %Y, %Y%m%d, ISO8601.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date_string": {
+            "type": "string"
+          },
+          "input_format": {
+            "type": "string"
+          },
+          "output_format": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "date_string"
+        ]
+      }
+    }
+  ]
 }

@@ -1,10 +1,53 @@
 name: date-calculator-ai-mcp
-description: "MEOK AI Labs — Date Calculator tools for AI agents and LLMs"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/date-calculator-ai-mcp
-license: MIT
-categories: [Utilities, Date/Time]
-tags: [date-calculation, datetime, timezone, date-math, calendar-utils]
-runtime: python
-entrypoint: server.py
+description: MCP server for date math tools.
+version: 1.0.0
+tools:
+- name: days_between
+  description: Calculate days between two dates (YYYY-MM-DD). Also returns weeks,
+    months estimate, and business days.
+  parameters:
+  - name: date1
+    type: string
+    required: true
+  - name: date2
+    type: string
+    required: true
+- name: add_business_days
+  description: Add business days to a date, optionally excluding holidays (comma-separated
+    YYYY-MM-DD).
+  parameters:
+  - name: start_date
+    type: string
+    required: true
+  - name: business_days
+    type: integer
+    required: true
+  - name: holidays
+    type: string
+    required: false
+- name: next_weekday
+  description: 'Find the next occurrence of a weekday. target_day: Monday-Sunday.
+    occurrence: nth occurrence (1-52).'
+  parameters:
+  - name: start_date
+    type: string
+    required: true
+  - name: target_day
+    type: string
+    required: true
+  - name: occurrence
+    type: integer
+    required: false
+- name: format_date
+  description: 'Parse and reformat dates. Common formats: %Y-%m-%d, %d/%m/%Y, %m/%d/%Y,
+    %B %d %Y, %A %B %d %Y, %Y%m%d, ISO8601.'
+  parameters:
+  - name: date_string
+    type: string
+    required: true
+  - name: input_format
+    type: string
+    required: false
+  - name: output_format
+    type: string
+    required: false
