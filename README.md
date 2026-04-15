@@ -1,21 +1,34 @@
-# date-calculator-ai-mcp
+# Date Calculator AI MCP Server
 
-MCP server for date math tools.
+> By [MEOK AI Labs](https://meok.ai) — Date math, business day calculations, and time utilities
 
-## Tools
+## Installation
 
-- **days_between** — Calculate days, business days, weeks between dates
-- **add_business_days** — Add business days with holiday support
-- **next_weekday** — Find next occurrence of a weekday
-- **format_date** — Parse and reformat dates in multiple formats
+```bash
+pip install date-calculator-ai-mcp
+```
 
 ## Usage
 
 ```bash
-pip install mcp
 python server.py
 ```
 
-## Rate Limits
+## Tools
 
-50 calls/day per tool (free tier).
+### `days_between`
+Calculate days between two dates. Returns weeks, months estimate, and business days.
+
+**Parameters:**
+- `date1` (str): First date (YYYY-MM-DD)
+- `date2` (str): Second date (YYYY-MM-DD)
+
+Additional date calculation tools are available including date addition, business day calculations, and weekday detection. See `server.py` for the full tool catalog.
+
+## Authentication
+
+Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+
+## License
+
+MIT — MEOK AI Labs
