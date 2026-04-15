@@ -1,0 +1,52 @@
+{
+  "name": "date-calculator-ai",
+  "description": "Date Calculator Ai tools powered by MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/date-calculator-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "days_between",
+      "description": "Calculate days between two dates (YYYY-MM-DD). Also returns weeks, months estimate, and business days."
+    },
+    {
+      "name": "add_business_days",
+      "description": "Add business days to a date, optionally excluding holidays (comma-separated YYYY-MM-DD)."
+    },
+    {
+      "name": "next_weekday",
+      "description": "Find the next occurrence of a weekday. target_day: Monday-Sunday. occurrence: nth occurrence (1-52)."
+    },
+    {
+      "name": "format_date",
+      "description": "Parse and reformat dates. Common formats: %Y-%m-%d, %d/%m/%Y, %m/%d/%Y, %B %d %Y, %A %B %d %Y, %Y%m%d, ISO8601."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
