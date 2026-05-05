@@ -1,34 +1,38 @@
-# Date Calculator AI MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Date math, business day calculations, and time utilities
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/date-calculator-ai-mcp)](https://github.com/CSOAI-ORG/date-calculator-ai-mcp/stargazers)
+
+# udateU calculatorU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/date-calculator-ai-mcp)](https://www.npmjs.com/package/@meok-ai/date-calculator-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/date-calculator-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install date-calculator-ai-mcp
+# or
+npm install -g @meok-ai/date-calculator-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `days_between`
-Calculate days between two dates. Returns weeks, months estimate, and business days.
-
-**Parameters:**
-- `date1` (str): First date (YYYY-MM-DD)
-- `date2` (str): Second date (YYYY-MM-DD)
-
-Additional date calculation tools are available including date addition, business day calculations, and weekday detection. See `server.py` for the full tool catalog.
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
