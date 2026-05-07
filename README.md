@@ -1,3 +1,7 @@
+[![date-calculator-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/date-calculator-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/date-calculator-ai-mcp)
+[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
+[![PyPI](https://img.shields.io/pypi/v/date-calculator-ai-mcp)](https://pypi.org/project/date-calculator-ai-mcp/)
+
 [![date-calculator-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/date-calculator-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/date-calculator-ai-mcp)
 
 <div align="center">
