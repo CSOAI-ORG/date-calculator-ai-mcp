@@ -54,6 +54,12 @@ def days_between(date1: str, date2: str, api_key: str = "") -> dict[str, Any]:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        date1 (str): The date1 to analyze or process.
+        date2 (str): The date2 to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -117,6 +123,13 @@ def add_business_days(start_date: str, business_days: int, holidays: str = "", a
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        start_date (str): The start date to analyze or process.
+        business_days (int): The business days to analyze or process.
+        holidays (str): The holidays to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -189,6 +202,13 @@ def next_weekday(start_date: str, target_day: str, occurrence: int = 1, api_key:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        start_date (str): The start date to analyze or process.
+        target_day (str): The target day to analyze or process.
+        occurrence (int): The occurrence to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -251,6 +271,14 @@ def format_date(date_string: str, input_format: str = "%Y-%m-%d", output_format:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        date_string (str): The date string to analyze or process.
+        input_format (str): The input format to analyze or process.
+        output_format (str): The output format to analyze or process.
+        %Y": The %Y" to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
