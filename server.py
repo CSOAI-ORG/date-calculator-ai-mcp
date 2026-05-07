@@ -38,7 +38,23 @@ WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", 
 
 @mcp.tool()
 def days_between(date1: str, date2: str, api_key: str = "") -> dict[str, Any]:
-    """Calculate days between two dates (YYYY-MM-DD). Also returns weeks, months estimate, and business days."""
+    """Calculate days between two dates (YYYY-MM-DD). Also returns weeks, months estimate, and business days.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -71,7 +87,23 @@ def days_between(date1: str, date2: str, api_key: str = "") -> dict[str, Any]:
 
 @mcp.tool()
 def add_business_days(start_date: str, business_days: int, holidays: str = "", api_key: str = "") -> dict[str, Any]:
-    """Add business days to a date, optionally excluding holidays (comma-separated YYYY-MM-DD)."""
+    """Add business days to a date, optionally excluding holidays (comma-separated YYYY-MM-DD).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -113,7 +145,23 @@ def add_business_days(start_date: str, business_days: int, holidays: str = "", a
 
 @mcp.tool()
 def next_weekday(start_date: str, target_day: str, occurrence: int = 1, api_key: str = "") -> dict[str, Any]:
-    """Find the next occurrence of a weekday. target_day: Monday-Sunday. occurrence: nth occurrence (1-52)."""
+    """Find the next occurrence of a weekday. target_day: Monday-Sunday. occurrence: nth occurrence (1-52).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -145,7 +193,23 @@ def next_weekday(start_date: str, target_day: str, occurrence: int = 1, api_key:
 
 @mcp.tool()
 def format_date(date_string: str, input_format: str = "%Y-%m-%d", output_format: str = "%B %d, %Y", api_key: str = "") -> dict[str, Any]:
-    """Parse and reformat dates. Common formats: %Y-%m-%d, %d/%m/%Y, %m/%d/%Y, %B %d %Y, %A %B %d %Y, %Y%m%d, ISO8601."""
+    """Parse and reformat dates. Common formats: %Y-%m-%d, %d/%m/%Y, %m/%d/%Y, %B %d %Y, %A %B %d %Y, %Y%m%d, ISO8601.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
