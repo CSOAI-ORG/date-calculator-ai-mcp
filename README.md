@@ -1,3 +1,5 @@
+[![date-calculator-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/date-calculator-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/date-calculator-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/date-calculator-ai-mcp)](https://github.com/CSOAI-ORG/date-calculator-ai-mcp/stargazers)
