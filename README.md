@@ -1,45 +1,58 @@
-[![date-calculator-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/date-calculator-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/date-calculator-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/date-calculator-ai-mcp)](https://pypi.org/project/date-calculator-ai-mcp/)
-
-[![date-calculator-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/date-calculator-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/date-calculator-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/date-calculator-ai-mcp)](https://github.com/CSOAI-ORG/date-calculator-ai-mcp/stargazers)
+# Date Calculator Ai MCP
 
-# udateU calculatorU aiU mcp
+**Date Calculator AI MCP Server — Date math tools.**
 
-****
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/date-calculator-ai-mcp)](https://www.npmjs.com/package/@meok-ai/date-calculator-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-date-calculator-ai-mcp)](https://pypi.org/project/meok-date-calculator-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/date-calculator-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Date Calculator AI MCP Server — Date math tools.
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `days_between` | Calculate days between two dates (YYYY-MM-DD). Also returns weeks, months estima |
+| `add_business_days` | Add business days to a date, optionally excluding holidays (comma-separated YYYY |
+| `next_weekday` | Find the next occurrence of a weekday. target_day: Monday-Sunday. occurrence: nt |
+| `format_date` | Parse and reformat dates. Common formats: %Y-%m-%d, %d/%m/%Y, %m/%d/%Y, %B %d %Y |
 
 ## Installation
 
 ```bash
-pip install date-calculator-ai-mcp
-# or
-npm install -g @meok-ai/date-calculator-ai-mcp
+pip install meok-date-calculator-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "date-calculator-ai": {
+      "command": "python",
+      "args": ["-m", "meok_date_calculator_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 4 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/date-calculator-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
