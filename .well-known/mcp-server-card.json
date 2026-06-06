@@ -1,0 +1,25 @@
+{
+  "name": "date-calculator-ai-mcp",
+  "title": "Date Calculator Ai Mcp",
+  "description": "MCP server for date calculator ai. Features days between, add business days, next weekday. From MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "days_between"
+    },
+    {
+      "name": "add_business_days"
+    },
+    {
+      "name": "next_weekday"
+    },
+    {
+      "name": "format_date"
+    }
+  ]
+}

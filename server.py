@@ -1,7 +1,7 @@
-"""Date Calculator AI MCP Server — Date math tools."""
+"""
+Date Calculator AI MCP Server — Date math tools."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import time
@@ -77,7 +77,7 @@ def days_between(date1: str, date2: str, api_key: str = "") -> dict[str, Any]:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if not _rate_check("days_between"):
@@ -147,7 +147,7 @@ def add_business_days(start_date: str, business_days: int, holidays: str = "", a
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if not _rate_check("add_business_days"):
@@ -226,7 +226,7 @@ def next_weekday(start_date: str, target_day: str, occurrence: int = 1, api_key:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if not _rate_check("next_weekday"):
@@ -296,7 +296,7 @@ def format_date(date_string: str, input_format: str = "%Y-%m-%d", output_format:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if not _rate_check("format_date"):
@@ -324,5 +324,8 @@ def format_date(date_string: str, input_format: str = "%Y-%m-%d", output_format:
         "quarter": (dt.month - 1) // 3 + 1
     }
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

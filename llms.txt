@@ -1,0 +1,33 @@
+# date-calculator-ai-mcp
+# **Date Calculator AI MCP Server — Date math tools.**
+
+## Install
+```bash
+pip install date-calculator-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `days_between`
+Calculate days between two dates (YYYY-MM-DD). Also returns weeks, months estimate, and business days.
+
+### `add_business_days`
+Add business days to a date, optionally excluding holidays (comma-separated YYYY-MM-DD).
+
+### `next_weekday`
+Find the next occurrence of a weekday. target_day: Monday-Sunday. occurrence: nth occurrence (1-52).
+
+### `format_date`
+Parse and reformat dates. Common formats: %Y-%m-%d, %d/%m/%Y, %m/%d/%Y, %B %d %Y, %A %B %d %Y, %Y%m%d, ISO8601.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

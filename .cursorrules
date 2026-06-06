@@ -1,0 +1,9 @@
+# date-calculator-ai-mcp - Auto-trigger Rules
+
+When the user asks about date calculator, use date-calculator-ai-mcp tools: days_between, add_business_days, next_weekday, format_date
+
+**Date Calculator AI MCP Server — Date math tools.**
+
+Install: `pip install date-calculator-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.
