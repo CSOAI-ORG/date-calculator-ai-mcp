@@ -1,0 +1,59 @@
+{
+  "name": "date-calculator-ai-mcp",
+  "description": "Date Calculator Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/date-calculator-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "days_between",
+      "name": "Days Between",
+      "description": "days_between via date-calculator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "add_business_days",
+      "name": "Add Business Days",
+      "description": "add_business_days via date-calculator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "next_weekday",
+      "name": "Next Weekday",
+      "description": "next_weekday via date-calculator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "format_date",
+      "name": "Format Date",
+      "description": "format_date via date-calculator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

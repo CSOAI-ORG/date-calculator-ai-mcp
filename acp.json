@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "date-calculator-ai-mcp",
+    "description": "Date Calculator Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "date-calculator-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "days_between",
+      "add_business_days",
+      "next_weekday",
+      "format_date"
+    ]
+  }
+}
